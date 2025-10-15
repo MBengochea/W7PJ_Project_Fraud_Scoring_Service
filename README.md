@@ -60,7 +60,6 @@ fraud_scoring_service/
 │ ├── validate_input.py # check for required columns, dtypes, nulls/duplicates
 │ ├── clean_data.py # fill missing values, convert/fix Timestamp, drop duplicates
 │ ├── feature_engineering.py # encode categoricals, scale numerics, derive new features
-│ └── model_evaluation.py # calculate accuracy, precision, recall, F1 and plot results
 ├── README.md # overview, setup instructions, how to run the pipeline
 ├── .gitignore # files and folders excluded from Git commits
 ├── .config.yaml # configuration file (data paths, model parameters)
