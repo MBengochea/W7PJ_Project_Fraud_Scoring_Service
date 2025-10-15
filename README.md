@@ -55,6 +55,7 @@ fraud_scoring_service/
 ├── notebooks/
 │   ├── 01_topic_selection.ipynb
 │   └── 02_data_preparation.ipynb
+│   └── 03_model_training.ipynb
 ├── src/
 │   ├── validate_input.py
 │   ├── clean_data.py
