@@ -48,34 +48,22 @@ Fraud patterns evolve. Static rules fail. ML adapts. This project turns raw data
 
 ## Repo folder Tree
 ```
-fraud_scoring_service/ ├── data/ │ └── raw/ │ └── synthetic_fraud_dataset.csv # the untouched CSV of transactions ├── notebooks/ │ ├── 01_load_data.ipynb # load and explore the raw dataset │ ├── 02_data_preparation.ipynb # validate schema/types, clean data, engineer features │ └── 03_model_training.ipynb # train classifiers and compare metrics ├── src/ │ ├── validate_input.py # check for required columns, dtypes, nulls/duplicates │ ├── clean_data.py # fill missing values, convert/fix Timestamp, drop duplicates │ ├── feature_engineering.py # encode categoricals, scale numerics, derive new features │ └── model_evaluation.py # calculate accuracy, precision, recall, F1 and plot results ├── README.md # overview, setup instructions, how to run the pipeline ├── .gitignore # files and folders excluded from Git commits ├── .config.yaml # configuration file (data paths, model parameters) ├── pyproject.toml # project metadata and dependency definitions └── uv.lock # locked versions of all dependencies
+fraud_scoring_service/
+├── data/
+│ └── raw/
+│ └── synthetic_fraud_dataset.csv # the untouched CSV of transactions
+├── notebooks/
+│ ├── 01_load_data.ipynb # load and explore the raw dataset
+│ ├── 02_data_preparation.ipynb # validate schema/types, clean data, engineer features
+│ └── 03_model_training.ipynb # train classifiers and compare metrics
+├── src/
+│ ├── validate_input.py # check for required columns, dtypes, nulls/duplicates
+│ ├── clean_data.py # fill missing values, convert/fix Timestamp, drop duplicates
+│ ├── feature_engineering.py # encode categoricals, scale numerics, derive new features
+│ └── model_evaluation.py # calculate accuracy, precision, recall, F1 and plot results
+├── README.md # overview, setup instructions, how to run the pipeline
+├── .gitignore # files and folders excluded from Git commits
+├── .config.yaml # configuration file (data paths, model parameters)
+├── pyproject.toml # project metadata and dependency definitions
+└── uv.lock # locked versions of all dependencies
 ```
-## Kanban (done)
-
-## To do (I)
-- Dataset Acquisition & Profiling: load and config dataset from data/raw/
-- Load into 01_topic_selection.ipynb and inspect: .shape, .dtypes, .isnull().sum(), .describe()
-- Check for duplicates, outliers, skewed distributions
-- Document findings: Which columns are usable, Which need cleaning or transformation
-- Output: Data profile ready for Day 3 cleaning
-
-- Create in src a function ===> validate_input.py: Check required columns: amount, timestamp, merchant, etc., Validate types: numeric, categorical, datetime, Flag missing values and duplicates.
-
-- Create another function ===> clean_data.py: Drop or fill nulls (mean/mode), Convert types (e.g. timestamp to datetime), Save cleaned DataFrame
-
-- document the logic of these functions here in notebook 02_data_preparation.ipynb Output: Clean, validated dataset ready for feature engineering
-
-
-## to do day 3
-
-. Load the cleaned dataset
-
-. Split into train/test
-
-. Train 4 models: Logistic Regression, Decision Tree, Random Forest, KNN
-
-. Predict and calculate metrics
-
-. Compare results in a table
-
-
