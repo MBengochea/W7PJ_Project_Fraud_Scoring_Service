@@ -67,22 +67,6 @@ fraud_scoring_service/
 └── uv.lock
 ```
 ## Kanban (done)
-- Mauricio Write README.md with Project goal: fraud scoring from any CSV, Business logic: why fraud matters, why ML is needed, Deliverables: pipeline, scores, model comparison.
-- Download Kaggle dataset and save to data/raw/
-
-## To do (done)
-- Create inside 01_topic_selection.ipynb: a write and check the theory and labs with short Markdown cells explaining use case of supervised learning, classification, metrics and how could be convinient or not base o this keggle dataset columns that we have.
-- Model plan: Logistic Regression, Decision Tree, Random Forest, KNN Output: this is a Clear onboarding doc for repo and collaborators
-- in 01_topic_selection.ipynb, write: ML lifecycle steps: data → model → evaluation → deployment
-- Feature engineering theory: selection, transformation, creation
-- Model constraints: KNN needs scaled numeric, Trees tolerate raw but benefit from encoding, Logistic Regression needs clean, linear features
-- Plan evaluation metrics: Accuracy, Precision, Recall, F1
-- Create function feature_engineering.py:
-- Encode categoricals (e.g. merchant type, location)
-- Scale numerics (e.g. amount, time gaps)
-- Create derived features: TotalSpend = sum of spend columns, TimeSinceLast = difference between timestamps
-- Save transformed DataFrame
-Document logic in notebook 02_data_preparation.ipynb Output: Model-ready features aligned with algorithm needs
 
 ## To do (II)
 - Dataset Acquisition & Profiling: load and config dataset from data/raw/
@@ -97,15 +81,6 @@ Document logic in notebook 02_data_preparation.ipynb Output: Model-ready feature
 
 - document the logic of these functions here in notebook 02_data_preparation.ipynb Output: Clean, validated dataset ready for feature engineering
 
-## tomorrow day 3
-- create the function model_evaluation.py:
-
-- Train/test split with random_state=42
-
-- Define model dictionary:
-models = {
-  'LogisticRegression': LogisticRegression(),
-  'DecisionTree': DecisionTreeClassifier(),
   'RandomForest': RandomForestClassifier(),
   'KNN': KNeighborsClassifier()
 }
