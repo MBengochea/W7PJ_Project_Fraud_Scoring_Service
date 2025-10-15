@@ -48,24 +48,7 @@ Fraud patterns evolve. Static rules fail. ML adapts. This project turns raw data
 
 ## Repo folder Tree
 ```
-fraud_scoring_service/
-├── data/
-│   └── raw/
-│        ├──synthetic_fraud_dataset.csv
-├── notebooks/
-│   ├── 01_topic_selection.ipynb
-│   └── 02_data_preparation.ipynb
-│   └── 03_model_training.ipynb
-├── src/
-│   ├── validate_input.py
-│   ├── clean_data.py
-│   ├── feature_engineering.py
-│   └── model_evaluation.py
-├── README.md
-└── .gitignore
-└── .config.yaml
-└── pyproject.toml
-└── uv.lock
+fraud_scoring_service/ ├── data/ │ └── raw/ │ └── synthetic_fraud_dataset.csv # the untouched CSV of transactions ├── notebooks/ │ ├── 01_load_data.ipynb # load and explore the raw dataset │ ├── 02_data_preparation.ipynb # validate schema/types, clean data, engineer features │ └── 03_model_training.ipynb # train classifiers and compare metrics ├── src/ │ ├── validate_input.py # check for required columns, dtypes, nulls/duplicates │ ├── clean_data.py # fill missing values, convert/fix Timestamp, drop duplicates │ ├── feature_engineering.py # encode categoricals, scale numerics, derive new features │ └── model_evaluation.py # calculate accuracy, precision, recall, F1 and plot results ├── README.md # overview, setup instructions, how to run the pipeline ├── .gitignore # files and folders excluded from Git commits ├── .config.yaml # configuration file (data paths, model parameters) ├── pyproject.toml # project metadata and dependency definitions └── uv.lock # locked versions of all dependencies
 ```
 ## Kanban (done)
 
