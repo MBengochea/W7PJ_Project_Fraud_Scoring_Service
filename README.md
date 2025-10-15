@@ -51,18 +51,18 @@ Fraud patterns evolve. Static rules fail. ML adapts. This project turns raw data
 fraud_scoring_service/
 ├── data/
 │ └── raw/
-│ └── synthetic_fraud_dataset.csv # the untouched CSV of transactions
+│ └── synthetic_fraud_dataset.csv   # the untouched CSV of transactions from keggle
 ├── notebooks/
-│ ├── 01_load_data.ipynb # load and explore the raw dataset
-│ ├── 02_data_preparation.ipynb # validate schema/types, clean data, engineer features
-│ └── 03_model_training.ipynb # train classifiers and compare metrics
+│ ├── 01_load_data.ipynb            # load and explore the raw dataset
+│ ├── 02_data_preparation.ipynb     # validate schema/types, clean data, engineer features
+│ └── 03_model_training.ipynb       # train classifiers and compare metrics
 ├── src/
-│ ├── validate_input.py # check for required columns, dtypes, nulls/duplicates
-│ ├── clean_data.py # fill missing values, convert/fix Timestamp, drop duplicates
-│ ├── feature_engineering.py # encode categoricals, scale numerics, derive new features
-├── README.md # overview, setup instructions, how to run the pipeline
-├── .gitignore # files and folders excluded from Git commits
-├── .config.yaml # configuration file (data paths, model parameters)
-├── pyproject.toml # project metadata and dependency definitions
-└── uv.lock # locked versions of all dependencies
+│ ├── validate_input.py             # check for required columns, dtypes, nulls/duplicates
+│ ├── clean_data.py                 # fill missing values, convert/fix Timestamp, drop duplicates
+│ ├── feature_engineering.py        # encode categoricals, scale numerics, derive new features
+├── README.md 
+├── .gitignore                      # files and folders excluded from Git commits
+├── .config.yaml                    # configuration file (data paths, model parameters)
+├── pyproject.toml                  # project metadata and dependency definitions
+└── uv.lock                         # locked versions of all dependencies
 ```
