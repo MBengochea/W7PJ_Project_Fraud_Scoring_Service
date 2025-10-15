@@ -69,7 +69,7 @@ fraud_scoring_service/
 ```
 ## Kanban (done)
 
-## To do (II)
+## To do (I)
 - Dataset Acquisition & Profiling: load and config dataset from data/raw/
 - Load into 01_topic_selection.ipynb and inspect: .shape, .dtypes, .isnull().sum(), .describe()
 - Check for duplicates, outliers, skewed distributions
@@ -82,9 +82,17 @@ fraud_scoring_service/
 
 - document the logic of these functions here in notebook 02_data_preparation.ipynb Output: Clean, validated dataset ready for feature engineering
 
-  'RandomForest': RandomForestClassifier(),
-  'KNN': KNeighborsClassifier()
-}
-- Define metric functions: accuracy, precision, recall, F1
 
-document setup in 02_data_preparation.ipynb
+## to do day 3
+
+. Load the cleaned dataset
+
+. Split into train/test
+
+. Train 4 models: Logistic Regression, Decision Tree, Random Forest, KNN
+
+. Predict and calculate metrics
+
+. Compare results in a table
+
+
